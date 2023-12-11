@@ -1,47 +1,51 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <nav-bar></nav-bar>
+  <about></about>
+  <bento-grid title="Showcase">
+    <bento-item>
+      <content-layout>
+        <h3 class="heading">Heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam consectetur dolorum, eum expedita harum laborum magnam magni maxime nisi pariatur, placeat quae quaerat quos rem sit ullam vitae!</p>
+      </content-layout>
+    </bento-item>
+    <bento-item>
+      <content-layout>
+        <h3 class="heading">Heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam consectetur dolorum, eum expedita harum laborum magnam magni maxime nisi pariatur, placeat quae quaerat quos rem sit ullam vitae!</p>
+      </content-layout>
+    </bento-item>
+    <bento-stack>
+      <content-layout>
+        <h3 class="heading">Heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam consectetur dolorum, eum expedita harum laborum magnam magni maxime nisi pariatur, placeat quae quaerat quos rem sit ullam vitae!</p>
+      </content-layout>
+    </bento-stack>
+    <bento-double>
+      <content-layout>
+        <h3 class="heading">Heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam consectetur dolorum, eum expedita harum laborum magnam magni maxime nisi pariatur, placeat quae quaerat quos rem sit ullam vitae!</p>
+      </content-layout>
+    </bento-double>
+    <bento-item>
+      <content-layout>
+        <h3 class="heading">Heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam consectetur dolorum, eum expedita harum laborum magnam magni maxime nisi pariatur, placeat quae quaerat quos rem sit ullam vitae!</p>
+      </content-layout>
+    </bento-item>
+    <bento-double>
+      <content-layout>
+        <h3 class="heading">Heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam consectetur dolorum, eum expedita harum laborum magnam magni maxime nisi pariatur, placeat quae quaerat quos rem sit ullam vitae!</p>
+      </content-layout>
+    </bento-double>
+  </bento-grid>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<script setup>
+import NavBar from "@/components/nav/nav-bar.vue";
+import About from "@/components/about.vue";
+import BentoGrid from "@/components/bento/bento-grid.vue";
+import BentoItem from "@/components/bento/bento-item.vue";
+import BentoDouble from "@/components/bento/bento-double.vue";
+import BentoStack from "@/components/bento/bento-stack.vue";
+import ContentLayout from "@/components/bento/layouts/content-layout.vue";
+</script>
